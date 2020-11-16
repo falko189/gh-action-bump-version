@@ -33,4 +33,4 @@ jobs:
       - name:  'Another Step'
         env:
           NEW_VERSION: ${{ steps.version-bump.outputs.newTag }}
-        run: echo 'new version $NEW_VERSION'
+        run: echo "new version $NEW_VERSION"

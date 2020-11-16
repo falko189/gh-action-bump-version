@@ -31,4 +31,6 @@ jobs:
       - name: "cat package.json"
         run: cat ./package.json
       - name:  'Another Step'
-        run: echo 'new version' ${{ steps.version-bump.outputs.newTag }}
+        env:
+          NEW_VERSION: ${{ steps.version-bump.outputs.newTag }}
+        run: echo 'new version $NEW_VERSION'
